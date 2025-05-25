@@ -6,7 +6,7 @@ import plotly.express as px
 import plotly.graph_objects as go
 
 #Importar datos
-ruta='/content/retail_limpio.xlsx'
+ruta='datos.xlsx'
 df= pd.read_excel(ruta)
 
 # Evolución mensual de ventas y ganancias
