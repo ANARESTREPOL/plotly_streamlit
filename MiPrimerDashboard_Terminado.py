@@ -69,7 +69,7 @@ fig = go.Figure([
 ])
 
 fig.update_layout(
-    title_text='Evolución mensual de ventas y ganancias',
+    title='Evolución mensual de ventas y ganancias',
     title_x=0.5,
     height=500
 )
@@ -83,7 +83,7 @@ fig = px.pie(
     ventas_segmento,
     names='Segmento',
     values='Ventas',
-    title_text='Ventas totales por segmento',
+    title='Ventas totales por segmento',
     hole=0.4
 )
 
@@ -114,7 +114,7 @@ fig = go.Figure(go.Bar(
     customdata=pct, hovertemplate='%{customdata:.2f}%'
 ))
 fig.update_layout(
-    title_text='Impacto del método de envío en las ventas',
+    title='Impacto del método de envío en las ventas',
     title_x=0.5, height=500
 )
 
@@ -149,7 +149,7 @@ fig = px.bar(df_melted,
              color_discrete_map=color_map,
              barmode='group',
              text='Etiqueta',
-             title_text='Ingresos y ganancias según categoría de producto')
+             title='Ingresos y ganancias según categoría de producto')
 
 fig.update_traces(textposition='outside', textfont_size=12)
 
@@ -198,7 +198,7 @@ fig = px.bar(df_melted,
              barmode='group',
              orientation='h',
              text='Etiqueta',
-             title_text='Comparación de ventas y ganancias por subcategoría')
+             title='Comparación de ventas y ganancias por subcategoría')
 
 fig.update_traces(textposition='outside', textfont_size=14)
 
@@ -224,7 +224,7 @@ fig = px.scatter(
     size='Ventas',
     color='Provincia/Estado/Departamento',
     hover_name='Provincia/Estado/Departamento',
-    title_text='Relación entre ventas y ganancias por provincia',
+    title='Relación entre ventas y ganancias por provincia',
     hover_data={
         'Provincia/Estado/Departamento': False,
         'Ventas': True,
